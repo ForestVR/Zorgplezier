@@ -2,7 +2,7 @@
 
 BASE_URL=https://download.unity3d.com/download_unity
 HASH=3071d1717b71
-VERSION=5.5.1f1
+VERSION=2018.2.5f1
 
 download() {
   file=$1
