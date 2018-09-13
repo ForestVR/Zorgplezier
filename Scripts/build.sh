@@ -1,4 +1,4 @@
-! /bin/sh
+#! /bin/sh
 
 # NOTE the command args below make the assumption that your Unity 
 project folder is
