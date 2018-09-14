@@ -1,28 +1,22 @@
-#! /bin/sh
+BASE_URL=https://netstorage.unity3d.com/unity
+HASH=4ebd28dd9664
+VERSION=2018.2.7f1
+download() {
+  file=$1
+  url="$BASE_URL/$HASH/$package"
+  echo "Downloading from $url: "
+  curl -o `basename "$package"` "$url"
+}
+install() {
+  package=$1
+  download "$package"
+  echo "Installing "`basename "$package"`
+  sudo installer -dumplog -package `basename "$package"` -target /
+}
+# See $BASE_URL/$HASH/unity-$VERSION-$PLATFORM.ini for complete list
+# of available packages, where PLATFORM is `osx` or `win`
+install "MacEditorInstaller/Unity-$VERSION.pkg"
+install "MacEditorTargetInstaller/UnitySetup-Windows-Support-for-Editor-$VERSION.pkg"
+install "MacEditorTargetInstaller/UnitySetup-Mac-Support-for-Editor-$VERSION.pkg"
+install "MacEditorTargetInstaller/UnitySetup-Linux-Support-for-Editor-$VERSION.pkg"
 
-echo 'Downloading from 
-https://download.unity3d.com/download_unity/3071d1717b71/MacEditorInstaller/Unity-2018.2.5f1.pkg
-'
-curl -o Unity.pkg https://download.unity3d.com/download_unity/3071d1717b71/MacEditorInstaller/Unity-2018.2.5f1.pkg
-
-echo 'Installing Unity.pkg'
-sudo installer -dumplog -package Unity.pkg -target /
-
-curl -o UnityMacSupport.pkg https://download.unity3d.com/download_unity/3071d1717b71/MacEditorTargetInstaller/UnitySetup-Mac-Support-for-Editor-2018.2.5f1.pkg 
-
-echo 'Installing Unity-Mac-Support.pkg'
-sudo installer -dumplog -package UnityMacSupport.pkg -target /
-
-
-curl -o UnityWinSupport.pkg https://download.unity3d.com/download_unity/3071d1717b71/MacEditorTargetInstaller/UnitySetup-Windows-Support-for-Editor-2018.2.5f1.pkg
-
-echo 'Installing Unity-Win-Support.pkg'
-sudo installer -dumplog -package UnityWinSupport.pkg -target /
-
-curl -o UnityLinuxSupport.pkg https://download.unity3d.com/download_unity/3071d1717b71/MacEditorTargetInstaller/UnitySetup-Linux-Support-for-Editor-2018.2.5f1.pkg
-
-echo 'Installing Unity-Linux-Support.pkg'
-sudo installer -dumplog -package UnityLinuxSupport.pkg -target /
-
-
-echo 'Install.sh ran successfully'
