@@ -3,7 +3,7 @@
 # NOTE the command args below make the assumption that your Unity 
 #  a subdirectory of the repo root directory, e.g. for this repo 
 project="Zorgplezier"
-{UNITYCI_PROJECT_NAME}='Zorgplezier'
+UNITYCI_PROJECT_NAME='Zorgplezier'
 #  the project folder is "UnityProject". If this is not true then adjust 
 #  -projectPath argument to point to the right location.
 
