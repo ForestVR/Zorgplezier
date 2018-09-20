@@ -11,6 +11,15 @@ mkdir "$(pwd)/Build"
 mkdir "$(pwd)/Build/osx"
 mkdir "$(pwd)/Build/windows"
 
+cd "$(pwd)/Build"
+pwd
+cd "$(pwd)"
+cd "$(pwd)/Build/osx"
+pwd
+cd "$(pwd)"
+cd "$(pwd)/Build/windows"
+pwd
+cd "$(pwd)"
 ## Run the editor unit tests
 echo "Running editor unit tests for ${UNITYCI_PROJECT_NAME}"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
