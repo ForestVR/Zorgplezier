@@ -1,9 +1,8 @@
 #! /bin/sh
 
 # NOTE the command args below make the assumption that your Unity 
-project folder is
 #  a subdirectory of the repo root directory, e.g. for this repo 
-"Zorgpleziertest" 
+project="Zorgpleziertest" 
 #  the project folder is "UnityProject". If this is not true then adjust 
 the 
 #  -projectPath argument to point to the right location.
