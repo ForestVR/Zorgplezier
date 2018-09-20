@@ -2,7 +2,8 @@
 
 # NOTE the command args below make the assumption that your Unity 
 #  a subdirectory of the repo root directory, e.g. for this repo 
-project="Zorgpleziertest" 
+project="Zorgplezier"
+${UNITYCI_PROJECT_NAME}="Zorgplezier"
 #  the project folder is "UnityProject". If this is not true then adjust 
 #  -projectPath argument to point to the right location.
 
@@ -26,7 +27,7 @@ rc0=$?
 
 ## Make the builds
 # Recall from install.sh that a separate module was needed for Windows 
-build support
+# build support
 echo "Attempting build of ${UNITYCI_PROJECT_NAME} for Windows"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
 	-batchmode \
