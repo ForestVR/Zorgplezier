@@ -10,7 +10,6 @@ download() {
 install() {
   package=$1
   download "$package"
-  ls
   echo "Installing "`basename "$package"`
   sudo installer -dumplog -package `basename "$package"` -target /
 }

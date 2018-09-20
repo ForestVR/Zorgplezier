@@ -4,7 +4,6 @@
 #  a subdirectory of the repo root directory, e.g. for this repo 
 project="Zorgpleziertest" 
 #  the project folder is "UnityProject". If this is not true then adjust 
-the 
 #  -projectPath argument to point to the right location.
 
 ## Run the editor unit tests
