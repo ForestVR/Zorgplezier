@@ -7,17 +7,14 @@ UNITYCI_PROJECT_NAME='Zorgplezier'
 #  the project folder is "UnityProject". If this is not true then adjust 
 #  -projectPath argument to point to the right location.
 ## Make Directories for Build
-mkdir "$(pwd)/Build"
-mkdir "$(pwd)/Build/osx"
-mkdir "$(pwd)/Build/windows"
+mkdir "$(pwd)/osx"
+mkdir "$(pwd)/windows"
 
-cd "$(pwd)/Build"
+cd "$(pwd)"
+cd "$(pwd)/osx"
 pwd
 cd "$(pwd)"
-cd "$(pwd)/Build/osx"
-pwd
-cd "$(pwd)"
-cd "$(pwd)/Build/windows"
+cd "$(pwd)/windows"
 pwd
 cd "$(pwd)"
 ## Run the editor unit tests
