@@ -29,8 +29,8 @@ echo "Running editor unit tests for ${UNITYCI_PROJECT_NAME}"
 	-editorTestsResultFile $(pwd)/test.xml \
 	-quit
 
-# echo "Unit test logs"
-# cat $(pwd)/test.xml
+echo "Unit test logs"
+cat $(pwd)/test.xml
 # exit if tests failed
 # if [ $rc0 -ne 0 ]; then { echo "Failed unit tests"; exit $rc0; } fi
 
