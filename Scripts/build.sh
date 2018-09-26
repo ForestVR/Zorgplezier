@@ -6,17 +6,6 @@ project="Zorgplezier"
 UNITYCI_PROJECT_NAME='Zorgplezier'
 #  the project folder is "UnityProject". If this is not true then adjust 
 #  -projectPath argument to point to the right location.
-## Make Directories for Build
-mkdir "$(pwd)/osx"
-mkdir "$(pwd)/windows"
-
-cd "$(pwd)"
-cd "$(pwd)/osx"
-pwd
-cd "$(pwd)"
-cd "$(pwd)/windows"
-pwd
-cd "$(pwd)"
 ## Run the editor unit tests
 echo "Running editor unit tests for ${UNITYCI_PROJECT_NAME}"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
